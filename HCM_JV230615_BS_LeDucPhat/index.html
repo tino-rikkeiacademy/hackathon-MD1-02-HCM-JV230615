@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meata tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Hackathon</title>
+</head>
+<body>
+    <script>
+        // Bài 1:
+        /* let str = prompt("Bài 1: Đảo ngược chuỗi" + "\n" + "Mời nhập một chuỗi, ví dụ 'program'");
+        let result ="";
+
+        for(let i = str.length - 1; i > 0; i--){
+            result += str[i]
+        }
+        result += str[0];
+
+        console.log("Bài 1")
+        console.log("Chuỗi nhập vào:", str)
+        console.log("Đảo chuỗi:", result) */
+
+
+
+
+
+        // Bài 2
+       /*  let str = prompt("Bài 2: Viết hoa kí tự đầu" + "\n" + "Mời nhập một chuỗi, ví dụ 'this is a test'");
+        let arrayStr = str.split(" ");
+        let result =[];
+
+        for(let i = 0; i < arrayStr.length; i++){
+            let capitalizedStr = arrayStr[i].charAt(0).toUpperCase() + arrayStr[i].substring(1);
+            result.push(capitalizedStr)
+            
+        }
+
+        console.log("Bài 2")
+        console.log("Chuỗi nhập vào:", str)
+        console.log("Viết hoa chữ cái đầu:", result.join(" ")) */
+
+
+        
+
+
+        //Bài 3
+        /* let inputStr = prompt("Mời nhập mảng, cách nhau khoảng trắng. Ví dụ: one two three 4 5 6");
+        let arr=[]
+        
+            if (inputStr !== null && inputStr !== "") {
+                arr = inputStr.trim().split(" ");
+                let uniqueSet = new Set(arr);
+                let result = [...uniqueSet];
+            
+                console.log("Mảng đã nhập", arr);
+                console.log("Mảng đã lọc", result);
+
+            } else {
+                console.log("Mảng không hợp lệ!");
+            } */
+            
+           
+        
+        
+
+        //Bài 4
+        /* let inputStr = prompt("Mời nhập mảng, cách nhau bằng dấu cách hoặc dấu phẩy. Ví dụ 5 4 2 1 3");
+
+        if (inputStr !== null && inputStr !== "") {
+            let arr = inputStr.split(/[ ,]+/).map(Number);
+            console.log("Mảng vừa nhập:", arr);
+
+            for(let i=0; i < arr.length; i++){
+                for(let j=i+1; j < arr.length; j++){
+
+                    if(arr[i] > arr[j]){
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        console.log("Sắp xếp tăng dần",arr)
+        
+        } else {
+            console.log("Không có mảng nào được nhập!");
+        }
+        */
+
+
+
+
+
+        // bài 5: Vẽ hình trái tim
+        //trái tim rỗng trong hình chữ nhật có kích thước là 6x7
+        
+            /* for (let i = 1; i <= 6; i++) {
+                let text = "";
+                for (let j = 1; j <= 7; j++) {
+                    if (
+                        (i == 1 && (j == 2 || j == 3 || j == 5 || j == 6)) ||
+                        (i == 2 && (j == 1 || j == 4 || j == 7)) ||
+                        (i == 3 && (j == 1 || j == 7)) ||
+                        (i == 4 && (j == 2 || j == 6)) ||
+                        (i == 5 && (j == 3 || j == 5)) ||
+                        (i == 6 && j == 4)
+                    ) {
+                        text += "*  ";
+                    } else {
+                        text += "   ";
+                    }
+                }
+                console.log(text);
+            } */
+
+        
+
+
+        
+        // Bài 6: Vẽ hình chữ nhật
+       /*  let width = parseInt(prompt("Nhập chiều dài hình chữ nhật: "));
+        let height = parseInt(prompt("Nhập chiều rộng hình chữ nhật: "));
+
+        console.log(width);
+        console.log(height);
+
+        for (let i = 1; i <= width; i++) {
+            let text = "";
+
+            for (let j = 1; j <= height; j++) {
+                
+                if (i == 1 || i == width || j == 1 || j == height) {
+                    text += "*" + "  ";
+                } else {
+                    text += "   ";
+                }
+            }
+                console.log(text);
+        }     */           
+
+    </script>
+</body>
+</html>
