@@ -44,10 +44,10 @@
         } -->
 
 
-    </script>
+    <!-- </script> -->
     <!-- ______________________________________________________________________________________________________ -->
     <!-- Bài 3: Xóa kí tự bị trùng -->
-    <input type="text" placeholder="Nhập chuỗi bất kỳ cách nhau bằng dấu ," id="text">
+    <!-- <input type="text" placeholder="Nhập chuỗi bất kỳ cách nhau bằng dấu ," id="text">
     <button onclick="getFunction()">IN </button>
     <p id="result"> </p>
     <script>
@@ -63,7 +63,7 @@
                 
                  document.getElementById("result").innerHTML = "mảng k hợp lệ";
             }
-    </script>
+    </script> -->
 
     <!-- Bai 4: SX phần tử -->
     <!-- <input type="text" placeholder="Nhập chuỗi bất kỳ" id="text">
@@ -82,8 +82,39 @@
 
         }
     </script> -->
+    <!-- bai 5 -->
+    <!-- <script>
+        function draw() {
+            for (let i = 1; i <= 6; i++) {
+                for (let j = 1; j <= 7; j++) {
+                    if ((i == 1 && (j == 1 || j == 4 || j == 7)) || (i == 2 && (j == 2
+                        || j == 3 || j == 5 || j == 6)) || (i == 3 && (j == 2 || j == 3 || j == 4 || j == 5 || j == 6)) || (i == 4 && (j == 1 || j == 3 || j == 4
+                            || j == 5 || j == 7)) || (i == 5 && (j == 1 || j == 2 || j == 4 || j == 6 || j == 7)) || (i == 6 && (j == 1 || j == 2 || j == 3 || j == 5
+                                || j == 6 || j == 7))) { document.write("&nbsp&nbsp"); } else { document.write("*"); }
+                } document.write("<br>");
+            }
+        }
+        draw();
+    </script> -->
 
+    <!-- bai 6 -->
+    <!-- <script>
+
+        function drawRec(a, b) {
+            for (let i = 1; i <= a; i++) {
+                let row = ""; for (let j = 1; j <= b; j++) {
+                    if (i == 1 || i == a || j == 1 || j == b) {
+                        row
+                            += "*";
+                    } else { row += " "; }
+                } console.log(row); 
+            }
+        } drawRec(4, 7); 
+        
+    </script> -->
 
 </body>
+
+
 
 </html>
