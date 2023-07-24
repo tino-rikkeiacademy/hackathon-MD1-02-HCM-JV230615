@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bài 1: Chương trình đảo ngược chuỗi và in ra kết quả  -->
+    <!-- <input type="text" placeholder="Nhập chuỗi bất kỳ" id="text">
+    <button onclick="getReverse()">IN ĐẢO NGƯỢC</button>
+    <p id="result"> </p>
+    <script>
+        function getReverse() {
+            let inputtext = document.getElementById("text").value;
+            let resultreverse = "";
+            let reversetext = inputtext.split("");
+            for (let i = inputtext.length - 1; i >= 0; i--) {
+                resultreverse += reversetext[i]
+            }
+            document.getElementById("result").innerHTML = resultreverse;
+        }
+    </script> -->
+    <!-- ---------------------------------------------------------------------------------------------- -->
+    <!-- Bài 2 -->
+    <!-- <input type="text" placeholder="Nhập chuỗi bất kỳ" id="text">
+    <button onclick="getFunction()">IN </button>
+    <p id="result"> </p>
+    <script>
+        function getFunction() {
+            let inputtext = document.getElementById("text").value;
+            let spitetext = inputtext.split(" ");
+            let arr = [];
+            console.log(spitetext);
+            for (let i = 0; i <= spitetext.length; i++) {
+                console.log(spitetext[i]);
+                let result = spitetext[1].charAt(0).toUpperCase() + spitetext[i].slice(1);
+                arr.push(result);
+            }
+            let resultuppercase = result.join("");
+                document.getElementById("result").innerHTML = resultuppercase;
+        } -->
+
+
+    </script>
+    <!-- ______________________________________________________________________________________________________ -->
+    <!-- Bài 3: Xóa kí tự bị trùng -->
+    <input type="text" placeholder="Nhập chuỗi bất kỳ cách nhau bằng dấu ," id="text">
+    <button onclick="getFunction()">IN </button>
+    <p id="result"> </p>
+    <script>
+        let arr=[];
+        function getFunction() {
+            let inputtext = document.getElementById("text").value;
+            if (inputtext !== null && inputtext !== ""){
+                arr=inputtext.trim().split(" ");
+                let checkText= new Set(arr);
+                let result=[...checkText];
+                 document.getElementById("result").innerHTML = result;
+            } else 
+                
+                 document.getElementById("result").innerHTML = "mảng k hợp lệ";
+            }
+    </script>
+
+    <!-- Bai 4: SX phần tử -->
+    <!-- <input type="text" placeholder="Nhập chuỗi bất kỳ" id="text">
+    <button onclick="getFunction()">IN </button>
+    <p id="result"> </p>
+    <script>
+        let arr = [];
+        function getFunction() {
+            let inputtext = document.getElementById("text").value;
+            let text = inputtext.split("");
+            for (let i = 0; i <= inputtext.length; i++) {
+                if (inputtext[i] > inputtext[i - 1])
+                    console.log(inputtext[i]);
+
+            }
+
+        }
+    </script> -->
+
+
+</body>
+
+</html>
