@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+input{
+    border-radius: 5px;
+}
+button{
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    margin-left: 50px;
+}
+   
+
+
+</style>
+<body>
+    <!-- *******************************************Bài 1 *******************************************-->
+    <!-- <div class="container">
+        <label for="">Mời Nhập: </label> <br>
+        <input type="text" id="input">
+    </div>
+    <div >
+        <button onclick="button1()">summit</button>
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        function button1(){
+        let reverseString = document.getElementById("input").value;
+        let arr = reverseString.split("");
+        let reverse = "";
+        for (let i = arr.length-1; i>=0; i--) {
+            reverse += arr[i]
+            
+        }
+        document.getElementById("output").innerText =reverse;
+    }
+    </script> -->
+    <!-- ******************************************bài2********************************************** -->
+   <!--  <div class="container">
+        <label for="">Mời Nhập: </label> <br>
+        <input type="text" id="input">
+    </div>
+    <div >
+        <button onclick="button1()">summit</button>
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        function button1(){
+           let   firstCharacter = document.getElementById("input").value;
+           let arr = firstCharacter.split(" ");
+           for (let i = 0; i<arr.length;i++) {
+            arr[i]= arr[i].charAt(0).toUpperCase() + arr[i].slice(1) 
+           }
+           let outString = arr.join(" ")
+           document.getElementById("output").innerHTML = outString;
+        }
+    </script> -->
+    <!-- ****************************************** bài 3 ******************************************-->
+   
+    <!-- <script>
+        function output(arr){
+                
+                
+                for (let i=0 ;i<arr.length-1;i++){
+                    for( let j=i+1 ; j<arr.length;j++){
+                        if(arr[i]==arr[j]){
+                            arr.splice(j,1);
+                        }
+                    }
+                }
+                document.write(arr);
+            }
+            output([1,2,3,3,4])
+ 
+ 
+
+    </script> -->
+           
+<!-- ******************************************************* Bài 4 ************************* -->
+          <!-- <script>
+              function button1(arr){
+                for(let i=0 ;i<arr.length-1;i++){
+                    for(j=i+1;j<arr.length;j++){
+                        if(arr[j]<arr[i]){
+                            let temp=arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=temp;
+                        }
+                    }
+                }
+                document.write(arr);
+            }
+           button1([5,4,3,2,1])
+          </script> -->
+          
+        <!-- ***************************************************bài 6********************************************** -->
+        <script>
+            let length = 6;
+            let width = 4;
+            function button1(length, width) {
+            for (let i = 0; i < width; i++) {
+                for (let j = 0; j < length; j++) {
+                    if (i === 0 || i === width - 1 || j === 0 || j === length - 1) {
+                        document.write("*");
+                } else {
+                        document.write("&nbsp;&nbsp;");
+                    }
+                }
+                        document.write("<br>");
+                }
+            }
+
+
+            button1(length, width);
+       </script>
+</body>
+</html>
