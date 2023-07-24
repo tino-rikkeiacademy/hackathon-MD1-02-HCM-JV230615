@@ -13,22 +13,21 @@
 
     <script>
         /* Bài 1 */
-        // let str = prompt("Xin mời nhập 1 chuỗi bất kỳ")
-        // let splitStr = str.split('');
-        // let strLength = splitStr.length
-        // let length  = strLength%2 == 0 ?  (strLength/2-1) : Math.ceil(strLength/2);
+        let str = prompt("Xin mời nhập 1 chuỗi bất kỳ")
+        let splitStr = str.split('');
+        let strLength = splitStr.length
+        let length  = strLength%2 == 0 ?  (strLength/2-1) : Math.ceil(strLength/2);
 
         
-        // for (let i = 0; i <= length; i++) {
-        //     let j = splitStr[strLength-i-1];
-        //     let temp = splitStr[i];
-        //     splitStr[i] = j ;
-        //     splitStr[strLength-i-1] = temp
-        //     console.log(splitStr[strLength-i-1]);
-        //     j  = temp
-        // }
+        for (let i = 0; i <= length; i++) {
+            let j = splitStr[strLength-i-1];
+            let temp = splitStr[i];
+            splitStr[i] = j ;
+            splitStr[strLength-i-1] = temp
+            j  = temp
+        }
 
-        // console.log(splitStr.join(''));
+        console.log(splitStr.join(''));
 
         /* Bài 2 */
         // let str = prompt("Xin mời nhập 1 chuỗi bất kỳ");
@@ -52,7 +51,7 @@
         // console.log(newStr);
   
         /* Bài 3 */
-        //   let arr=["one", "two", "three", "one", "one",  "four", "five", "four", "five"];
+        // let arr=["one", "two", "three", "one", "one",  "four", "five", "four", "five"];
 
         // for (let i = 0; i < arr.length-1; i++) {
         //     for (let j = 1 ; j < arr.length; j++) {
