@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>bài 4</title>
+    </head>
+    <body>
+        <script>
+            // bài 4:sort
+
+            const inputStr = prompt(
+                "Mời nhập mảng, cách nhau bằng dấu cách hoặc dấu phẩy:"
+            );
+
+            if (inputStr !== null && inputStr !== "") {
+                var arr = inputStr.split(/[ ,]+/).map(Number);
+                console.log("Mảng vừa nhập:", arr);
+            } else {
+                console.log("Không có mảng nào được nhập!");
+            }
+            // bubble sort
+            var newArr = [...arr];
+            function bubbleSort(newArr) {
+                const n = newArr.length;
+                for (let i = 0; i < n - 1; i++) {
+                    for (let j = 0; j < n - i - 1; j++) {
+                        if (newArr[j] > newArr[j + 1]) {
+                            // Swap arr[j], arr[j+1]
+                            [newArr[j], newArr[j + 1]] = [
+                                newArr[j + 1],
+                                newArr[j],
+                            ];
+                        }
+                    }
+                }
+                return newArr;
+            }
+
+            const sortedArr = bubbleSort(newArr);
+            console.log(sortedArr);
+        </script>
+    </body>
+</html>
