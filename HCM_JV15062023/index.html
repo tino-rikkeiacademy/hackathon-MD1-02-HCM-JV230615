@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <pre id="heart"></pre>
+
+    <pre id="rectangle"></pre>
+
+    <script>
+        /* Bài 1 */
+        // let str = prompt("Xin mời nhập 1 chuỗi bất kỳ")
+        // let splitStr = str.split('');
+        // let strLength = splitStr.length
+        // let length  = strLength%2 == 0 ?  (strLength/2-1) : Math.ceil(strLength/2);
+
+        
+        // for (let i = 0; i <= length; i++) {
+        //     let j = splitStr[strLength-i-1];
+        //     let temp = splitStr[i];
+        //     splitStr[i] = j ;
+        //     splitStr[strLength-i-1] = temp
+        //     console.log(splitStr[strLength-i-1]);
+        //     j  = temp
+        // }
+
+        // console.log(splitStr.join(''));
+
+        /* Bài 2 */
+        // let str = prompt("Xin mời nhập 1 chuỗi bất kỳ");
+        // let splitStr = str.split(' ');
+        // let arr = [];
+
+        // for(let i = 0 ; i < splitStr.length; i++) {
+        //     let textSplit = splitStr[i].split('');
+        //     let text = []
+        //     for (let j = 0; j < textSplit.length; j++) {
+        //         if (j == 0) {
+        //             text.push(textSplit[j].toLocaleUpperCase())
+        //         }else {
+        //             text.push(textSplit[j])
+        //         }   
+        //     }
+        //     arr.push(text.join(''));
+        // }
+
+        // let newStr = arr.join(' ')
+        // console.log(newStr);
+  
+        /* Bài 3 */
+        let arr=["one", "two", "three", "one", "four", "five", "four", "five"];
+
+        for (let i = 0; i < arr.length-1; i++) {
+            for (let j = i+1 ; j < arr.length; j++) {
+                if (arr[i] ==  arr[j]) {  
+                    arr.splice(j,1)
+                }
+            }
+        }
+        console.log(arr);
+
+        /* Bài 4 */
+        // let arr =  [2,4,7,8,5,38,8]
+        // for (let i = 0; i < arr.length-1; i++) {
+        //     for(let j = i+1;  j < arr.length; j++) {
+        //         if (arr[i] > arr[j]) {
+        //             let temp = arr[i];
+        //             arr[i] = arr[j];
+        //             arr[j] = temp;
+        //         }
+        //     }
+        // }
+
+        // console.log(arr);
+
+        /* Bài 5 */
+        let heart =""
+
+        for (let i = 1; i <=6  ; i++) {
+            for (let j = 1; j <= 7 ; j++) {
+                if(i == 1) {
+                    if (j == 2 || j == 3 || j == 5 || j == 6){
+                        heart += `*`
+                    }else {
+                        heart += ` `
+                    }
+                }else if(i == 2){
+                    if(j == 1 || j == 4 || j == 7) {
+                        heart += `*`
+                    }else {
+                        heart += ` `
+                    }
+                }else if(i == 3) {
+                    if(j == 1 || j == 7) {
+                        heart += `*`
+                    }else {
+                        heart += ` `
+                    }
+                }else if(i==4) {
+                    if(j == 2 || j == 6) {
+                        heart += `*`
+                    }else {
+                        heart += ` `
+                    }
+                }else if(i==5) {
+                    if(j == 3 || j == 5) {
+                        heart += `*`
+                    }else {
+                        heart += ` `
+                    }
+                }else {
+                    if(j == 4) {
+                        heart += `*`
+                    }else {
+                        heart += ` `
+                    }   
+                }
+            }
+            heart += `<br>`
+        }
+
+        document.getElementById("heart").innerHTML = heart
+        // console.log(heart);
+
+        /* Bài 6*/
+        let rectangle = ""
+
+        for (let i = 1 ; i <= 3; i++) {
+            for (let j = 1; j <=7  ; j++) {
+                if(i == 1 || i == 3) {
+                    rectangle += `*`
+                }else {
+                    if (j == 1 || j == 7) {
+                        rectangle += `*`
+                    }else {
+                        rectangle += ` `
+                    }
+                }
+            }
+            rectangle += `<br>`
+        }
+
+        document.getElementById("rectangle").innerHTML = rectangle;
+    </script>
+</body>
+</html>
