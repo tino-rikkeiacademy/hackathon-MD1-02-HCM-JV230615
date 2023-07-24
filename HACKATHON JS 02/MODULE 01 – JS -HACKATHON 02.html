@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODULE 01 – JS -HACKATHON 02 - 24 07 2023</title>
+</head>
+
+<script>
+/*             Bài 1: Viết chương trình đảo ngược chuỗi và in ra kết quả.
+
+function reverseString(str) {
+  let reversedStr = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str.charAt(i);
+  }
+  return reversedStr;
+}
+
+// Nhận chuỗi từ người dùng
+let inputStr = prompt("Nhập vào một chuỗi:");
+
+// Kiểm tra xem người dùng đã nhập chuỗi hay chưa
+if (inputStr !== null && inputStr !== "") {
+  let reversedStr = reverseString(inputStr);
+document.write("Chuỗi bạn đã nhập vào: " + inputStr + "<br>");
+document.write("Chuỗi đảo ngược: " + reversedStr);
+  console.log("Chuỗi đảo ngược: " + reversedStr);
+} else {
+  console.log("Bạn chưa nhập chuỗi hoặc đã hủy.");
+}*/
+
+
+/*              Bài 2: Viết 1 chương trình với đầu vào là 1 chuỗi ký tự và 
+                in ra chuỗi đó với các ký tự đầu của chữ mỗi chữ được viết hoa.
+
+function vietHoakytudau(str) {
+  // Tách chuỗi thành các từ riêng biệt
+  const words = str.split(" ");
+
+  // Duyệt qua từng từ và chuyển đổi ký tự đầu tiên thành chữ hoa
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+  }
+
+  // Gộp các từ đã chuyển đổi lại thành một chuỗi mới
+  const result = words.join(" ");
+
+  // Trả về chuỗi đã chuyển đổi
+  return result;
+}
+
+// Nhập chuỗi từ người dùng
+const inputString = prompt("Nhập vào một chuỗi:");
+
+// Kiểm tra xem người dùng đã nhập hay chưa
+if (inputString !== null && inputString !== "") {
+  // Gọi hàm để chuyển đổi chuỗi và in kết quả ra màn hình
+  const chuoiViethoakytudau = vietHoakytudau(inputString);
+document.write("Chuỗi bạn đã nhập vào: " + inputString + "<br>");
+document.write("Chuỗi đã viết Hoa ký tự đầu: " + chuoiViethoakytudau);
+console.log(chuoiViethoakytudau);
+} else {
+  console.log("Bạn chưa nhập chuỗi!");
+}*/
+
+/*          Bài 3: Viết một chương trình xóa các phần tử trùng của một mảng và in ra kết quả.
+
+function xoaPhantutrung(arr) {
+    // Sử dụng Set để lưu các phần tử duy nhất của mảng
+    const phantuKhongtrung = new Set(arr);
+
+    // Chuyển Set về mảng mới không có các phần tử trùng
+    const newArr = Array.from(phantuKhongtrung);
+
+    return newArr;
+}
+// Hàm nhập mảng từ người dùng và in ra kết quả
+function main() {
+    const userInput = prompt("Nhập mảng, các phần tử cách nhau bằng dấu phẩy: ");
+    const inputArray = userInput.split(",");
+
+    const resultArray = xoaPhantutrung(inputArray);
+    document.write("Mảng bạn đã nhập vào: " + userInput + "<br>");
+    document.write("Mảng mới đã xóa các phần tử trùng: " + resultArray);
+    console.log("Mảng mới đã xóa các phần tử trùng: ", resultArray);
+}
+
+main();*/
+
+/*            Bài 4 : Viết một chương sắp xếp các phần tử là số ở trong mảng theo thứ tự tăng dần.
+
+function xepsoTang(arr) {
+  let len = arr.length;
+  let sorted = false;
+
+  while (!sorted) {
+    sorted = true;
+    for (let i = 0; i < len - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        sorted = false;
+      }
+    }
+  }
+
+  return arr;
+}
+
+// Đầu vào từ người dùng
+let userInput = prompt("Nhập các số, cách nhau bằng dấu phẩy: ");
+let inputArr = userInput.split(",").map(Number);
+
+let sortedArr = xepsoTang(inputArr);
+document.write("Mảng số bạn đã nhập vào: " + userInput + "<br>");
+document.write("Mảng đã sắp xếp tăng dần: " + sortedArr.join(","));
+console.log("Mảng đã sắp xếp tăng dần: " + sortedArr.join(","));
+*/
+</script>
+
+     <!-- Bài 6 : Tạo hình chữ nhật rỗng bằng JavaScript	
+<body>
+  <pre id="chunhat"></pre>
+  <script>
+      let i = +prompt("chiều dài");
+        let j = +prompt("chiều rộng");
+        let chunhat = '';
+
+        for (let k = 1; k <= j; k++) {
+            let line = '';
+            for (let l = 1; l <= i; l++) {
+                if (k == 1 || k == j || l == 1 || l == i) {
+                    line += '* ';
+                } else {
+                    line += '  ';
+                }
+            }
+            chunhat += line + '\n';
+        }
+        document.getElementById('chunhat').textContent = chunhat;
+  </script>
+</body>   -->
+
+</body>
+
+</html>
