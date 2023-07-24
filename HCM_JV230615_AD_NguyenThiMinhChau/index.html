@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>User Interface </title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="table_head">
+        <table class="table">
+            <thead>
+                <tr class="table__title">
+                    <td class="text_left">Players: 3 </td>
+                    <td rowspan="3">Rikkei Scoreboard</td>
+                    <td class="table__title--red">Stopwatch</td>
+                </tr>
+                <tr>
+                    <td class="table__title text_left">Total Points: 0</td>
+                    <td class="table__title--red">111</td>
+                </tr>
+                <tr>
+                    <td class="table__title"></td>
+                    <td class="table__title--red">
+                        <button class="button">START</button>
+                        <button class="button">RESER</button>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr class="table__listplayer">
+                    <td class="text_left table__listplayer_name " colspan="2">
+                        <span onclick="deletePlayer()" class="material-symbols-outlined">
+                            close
+                        </span>
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                        <span>Minh cuong</span>
+                    </td>
+                    <td class="table__listplayer_text">
+                        <span class="material-symbols-outlined">
+                            remove
+                        </span>
+                        <span>0</span>
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+
+                    </td> -->
+                <!-- </tr> -->
+            </tbody>
+            <tfoot>
+                <tr class=" table__title">
+                    <td colspan="3">
+                        <div class="table__input">
+                            <input id="inputname" class="btn" type="text" placeholder="Enter a Players name">
+                            <button onclick="addPlayer()" class="button">ADD PLAYER</button>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <Script>
+        let players = JSON.parse(localStorage.getItem(("players"))) || [];
+        // function tao id
+        function uuid() {
+            return Math.floor(Math.random() * 9999999999999999)
+        }
+        function addPlayer() {
+            let playername = document.getElementById("inputname").value;
+            let userplayer = {
+                name: playername,
+                point: 0,
+                id: uuid()
+            }
+            players.push(userplayer);
+            document.getElementById("inputname").value = "";
+            localStorage.setItem("players", JSON.stringify(players)); 1
+            renderplayers();
+            showPlayers()
+
+
+        }
+
+        function renderplayers() {
+            let element = "";
+            for (let i = 0; i < players.length; i++) {
+                element +=
+                    `
+                <tr class="table__listplayer">
+                        <td class="text_left table__listplayer_name " colspan="2">
+                            <span onclick="deletePlayer(${players[i].id})" class="material-symbols-outlined">
+                                close
+                            </span>
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                            <span>${players[i].name}</span>
+                        </td>
+                        <td class="table__listplayer_text">
+                            <span onclick="decreasePoint()" class="material-symbols-outlined">
+                                remove
+                            </span>
+                            <span id="score">0</span>
+                            <span onclick="increasePoint(${players[i].point})" class="material-symbols-outlined">
+                                add
+                            </span>
+    
+                        </td>
+                    </tr>
+                `
+
+            }
+
+            document.getElementById("tbody").innerHTML = element;
+        }
+        renderplayers();
+        function increasePoint() {
+
+            let point = document.getElementById("score");
+            for (let i = 0; i < players.length; i++) {
+                players[i].point += 1;
+                localStorage.setItem("players", JSON.stringify(players));
+                renderplayers();
+            }
+        }
+        function deletePlayer(id) {
+
+            for (let i = 0; i < players.length; i++) {
+                if (players[i].id == id) {
+                    players.splice(i, 1)
+                    localStorage.setItem("players", JSON.stringify(players));
+                    renderplayers();
+                    showPlayers()
+
+                }
+            }
+
+        }
+        //show players
+        function showPlayers() {
+            document.getElementsByClassName("text_left")[0].innerHTML = `total: ${players.length}`;
+        }
+        showPlayers()
+    </Script>
+
+    <Script src="./index.JS"></Script>
+</body>
+
+
+</html>
