@@ -1,0 +1,110 @@
+<!-- Bài 1 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trái tim bằng JavaScript</title>
+</head>
+
+<body>
+    <script>
+
+        // Bài 1
+
+        // function rString(str) {
+        //     let rdStr = '';
+        //     for (let i = str.length - 1; i >= 0; i--) {
+        //         rdStr += str[i];
+        //     }
+        //     return rdStr;
+        // }
+        // let str1 = "program";
+        // let str2 = "data";
+        // console.log(rString(str1));
+        // console.log(rString(str2));
+
+
+        // Bài 2
+
+        // function capitalize(str) {
+        //     let words = str.split(' ');
+        //     for (let i = 0; i < words.length; i++) {
+        //         words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+        //     }
+        //     let capStr = words.join(' ');
+        //     return capStr;
+        // }
+        // let str1 = "this is A Test";
+        // let str2 = "hello rikkei academy";
+        // console.log(capitalize(str1));
+        // console.log(capitalize(str2));
+
+
+        // Bài 3
+
+        // function removeDup(arr) {
+        //     let uniqueArr = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (!uniqueArr.includes(arr[i])) {
+        //             uniqueArr.push(arr[i]);
+        //         }
+        //     }
+        //     return uniqueArr;
+        // }
+        // let arr1 = ["one", "two", "three", "one", "one", "four", "five", "four", "five", "five"];
+        // let arr2 = [1, 2, 3, 3, 4, 5, 4, 4, 4, 5, 5];
+        // console.log(removeDup(arr1));
+        // console.log(removeDup(arr2));
+        
+        // Bài 4
+
+        // function selectionSort(arr) {
+        //     let n = arr.length;
+        //     for (let i = 0; i < n - 1; i++) {
+        //         let min = i;
+        //         for (let j = i + 1; j < n; j++) {
+        //             if (arr[j] < arr[min]) {
+        //                 min = j;
+        //             }
+        //         }
+        //         if (min!== i) {
+        //             const temp = arr[i];
+        //             arr[i] = arr[min];
+        //             arr[min] = temp;
+        //         }
+        //     }
+        //     return arr;
+        // }
+        // let arr = [5, 2, 3, 4, 1];
+        // console.log(selectionSort(arr));
+
+        // Bài 6
+
+        // function drawRectangle(width, height) {
+        //     if (width <= 0 || height <= 0) {
+        //         console.log("d,r > 0");
+        //         return;
+        //     }
+        //     let rectangle = "";
+        //     for (let i = 1; i <= height; i++){
+        //         let line = "";
+        //         if (i === 1 || i === height){
+        //             line = "*".repeat(width);
+        //         } else{
+        //             line = "*" + " ".repeat(width - 2) + "*";
+        //         }
+        //         rectangle += line + "\n";
+        //     }
+        //     return rectangle;
+        // }
+        // let width = 12;
+        // let height = 5;
+        // let rectangleString = drawRectangle(width, height);
+        // let rectangleElement = document.getElementById("rectangle");
+        // rectangleElement.innerText = rectangleString;
+
+    </script>
+</body>
+
+</html>
